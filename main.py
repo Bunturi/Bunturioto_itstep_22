@@ -28,3 +28,7 @@ for data in python_data:
             new_movies.append(movie)
         else:
             new_movies.append(movie)  # If none of the conditions are met, add the movie unchanged
+
+# Write the updated movie data back to the JSON file
+with open('movies.json', 'w', encoding='utf-8') as file:
+    json.dump(python_data, file, indent=4, ensure_ascii=False)
