@@ -21,3 +21,10 @@ for data in python_data:
             # Update genre to 'Old_Drama' if it was 'Drama', otherwise keep the genre unchanged
             movie['genres'] = ['Old_Drama' if genre == 'Drama' else genre for genre in movie['genres']]
             new_movies.append(movie)
+
+        # Check if release year is 2000
+        elif movie['release_date'][:4] == '2000':
+            movie['genres'] = ['New_Century']  # Set genre to 'New_Century'
+            new_movies.append(movie)
+        else:
+            new_movies.append(movie)  # If none of the conditions are met, add the movie unchanged
